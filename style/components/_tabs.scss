@@ -1,0 +1,47 @@
+.tab-buttons {
+  display: flex;
+}
+
+.tab-btn {
+  text-align: center;
+  line-height: 45px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 20px 15px;
+  user-select: none;
+}
+
+.tab-btn-current {
+  background-color: rgb(255, 94, 0);
+}
+
+.tab-btn-done {
+  background-color: forestgreen;
+}
+
+.tab-btn-deleted {
+  background-color: grey;
+}
+
+/* ======================================================================== */
+.tab-content {
+  display: none;
+}
+
+.tab-content-current {
+  background-color: rgb(255, 94, 0);
+}
+
+.tab-content-done {
+  background-color: forestgreen;
+}
+
+.tab-content-deleted {
+  background-color: grey;
+}
+
+.tab-active {
+  display: block;
+  box-shadow: 4px 5px 3px 1px rebeccapurple;
+}
