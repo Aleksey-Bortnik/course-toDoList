@@ -3,6 +3,14 @@
   margin: 0;
 }
 
+#open-new-task-popup {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 30px;
+  background-color: rgb(231, 146, 146);
+}
+
 @import "./components/tabs";
 @import "./components/popup";
 @import "./components/table";
