@@ -1,3 +1,5 @@
+@import "./components/tabs";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,6 +11,7 @@
   width: 100vw;
   height: 30px;
   background-color: rgb(231, 146, 146);
+  color: #ffffff
 }
 
 @import "./components/tabs";

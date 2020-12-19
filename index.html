@@ -36,29 +36,29 @@
         <div class="tabs">
 
             <div class="tab-buttons">
-                <da_oleg_eto-div tabNumber='1' class="tab-btn tab-btn-current">Current</da_oleg_eto-div>
-                <da_oleg_eto-div tabNumber='2' class="tab-btn tab-btn-done">Done</da_oleg_eto-div>
-                <da_oleg_eto-div tabNumber='3' class="tab-btn tab-btn-deleted">Deleted</da_oleg_eto-div>
+                <da_oleg_eto-div tabNumber='1' class="tab-btn tab-btn-current">Текущие</da_oleg_eto-div>
+                <da_oleg_eto-div tabNumber='2' class="tab-btn tab-btn-done">Готово</da_oleg_eto-div>
+                <da_oleg_eto-div tabNumber='3' class="tab-btn tab-btn-deleted">Удаленные</da_oleg_eto-div>
             </div>
             <!-- ======================================================================================================= -->
 
             <div class="tab-content-container">
                 <div tabNumber='1' class="tab-content tab-content-current tab-active">
                     <h2>Текущие задачи</h2>
-                    <ul id="current-list"></ul>
+                    <ul id="current-list" class="task-table"></ul>
                     <button id="open-new-task-popup">Добавить задачу</button>
                 </div>
                 <!-- ======================================================================================================= -->
 
                 <div tabNumber='2' class="tab-content tab-content-done">
                     <h2>Выполненные задачи</h2>
-                    <ul id="done-list"></ul>
+                    <ul id="done-list" class="task-table"></ul>
                 </div>
                 <!-- ======================================================================================================= -->
 
                 <div tabNumber='3' class="tab-content tab-content-deleted">
                     <h2>Удаленные задачи</h2>
-                    <ul id="deleted-list"></ul>
+                    <ul id="deleted-list" class="task-table"></ul>
                 </div>
             </div>
             <!-- ======================================================================================================= -->

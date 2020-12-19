@@ -31,12 +31,16 @@ export default class Table {
     //=======================================================================!!!
     const taskElement = document.createElement("li");
 
+    taskElement.classList.add("task-visual");
+
     const taskIdAttribute = document.createAttribute("task-id");
     taskIdAttribute.value = task.id;
     taskElement.setAttributeNode(taskIdAttribute);
 
     taskElement.innerHTML = task.description;
+
     this.addButtons(taskElement);
+
     // HTML Шрёдингера.
     this.list.appendChild(taskElement);
 
@@ -66,21 +70,25 @@ export default class Table {
   }
 
   addReturnToActiveButton(taskElement) {
-    this.addMovingButton( taskElement, "return-btn", "Вернуть", "current");
+    this.addMovingButton(taskElement, ["task-button", "return-btn"], "Вернуть", "current");
   }
 
   addDoneButton(taskElement) {
-    this.addMovingButton(taskElement, "done-btn", "Готово", "done");
+    this.addMovingButton(taskElement, ["task-button", "done-btn"], "Готово", "done");
   }
 
   addDeleteButton(taskElement) {
-    this.addMovingButton(taskElement, "delete-btn", "Удалить", "deleted");
+    this.addMovingButton(taskElement, ["task-button", "delete-btn"], "Удалить", "deleted");
   }
 
-  addMovingButton(taskElement, buttonClass, buttonInnerHtml, tableName) {
+  addMovingButton(taskElement, buttonClasses, buttonInnerHtml, tableName) {
     //===================================================!!!
     const movingButton = document.createElement("button");
-    movingButton.classList.add(buttonClass);
+    
+    for (let buttonClass of buttonClasses) {
+      movingButton.classList.add(buttonClass);
+    }
+    
     movingButton.innerHTML = buttonInnerHtml;
 
     movingButton.addEventListener("click", function () {
@@ -95,7 +103,7 @@ export default class Table {
 
           if (tableDataTask.id == taskId) {
             tableData.splice(i, 1);
-            localStorage.setItem(this.id, tableData);
+            localStorage.setItem(this.id, JSON.stringify(tableData));
             break;
           }
         }

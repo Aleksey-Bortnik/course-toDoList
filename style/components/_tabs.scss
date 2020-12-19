@@ -4,12 +4,17 @@
 
 .tab-btn {
   text-align: center;
-  line-height: 45px;
-  width: 45px;
-  height: 45px;
+  line-height: 80px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   margin: 20px 15px;
   user-select: none;
+  color: #ffffff;
+}
+
+h2 {
+  color: #ffffff;
 }
 
 .tab-btn-current {
@@ -31,17 +36,25 @@
 
 .tab-content-current {
   background-color: rgb(255, 94, 0);
+  color: #ffffff;
 }
 
 .tab-content-done {
   background-color: forestgreen;
+  color: #ffffff;
 }
 
 .tab-content-deleted {
   background-color: grey;
+  color: #ffffff;
+}
+
+#deleted-list {
+  text-decoration: line-through;
+  color: rgb(56, 58, 56);
 }
 
 .tab-active {
   display: block;
-  box-shadow: 4px 5px 3px 1px rebeccapurple;
+  box-shadow: 4px 5px 3px 1px rgb(159, 151, 167);
 }
